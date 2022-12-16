@@ -1,20 +1,20 @@
-<h1 align="center">tf-libsonnet/PROVIDER_NAME</h1>
+<h1 align="center">tf-libsonnet/dopplerhq-doppler</h1>
 
 <p align="center">
   <em>Generate Terraform with Jsonnet</em>
 </p>
 
 <p align="center">
-  <a href="https://github.com/tf-libsonnet/PROVIDER_NAME/blob/main/LICENSE">
-    <img alt="LICENSE" src="https://img.shields.io/github/license/tf-libsonnet/PROVIDER_NAME?style=for-the-badge">
+  <a href="https://github.com/tf-libsonnet/dopplerhq-doppler/blob/main/LICENSE">
+    <img alt="LICENSE" src="https://img.shields.io/github/license/tf-libsonnet/dopplerhq-doppler?style=for-the-badge">
   </a>
-  <a href="https://github.com/tf-libsonnet/PROVIDER_NAME/releases/latest">
-    <img alt="latest release" src="https://img.shields.io/github/v/release/tf-libsonnet/PROVIDER_NAME?style=for-the-badge">
+  <a href="https://github.com/tf-libsonnet/dopplerhq-doppler/releases/latest">
+    <img alt="latest release" src="https://img.shields.io/github/v/release/tf-libsonnet/dopplerhq-doppler?style=for-the-badge">
   </a>
 </p>
 
 This repository contains [Jsonnet](https://jsonnet.org/) functions for generating resources and data sources for the
-[PROVIDER_NAME_SLASH](https://registry.terraform.io/providers/PROVIDER_NAME_SLASH) Terraform provider.
+[DopplerHQ/doppler](https://registry.terraform.io/providers/DopplerHQ/doppler) Terraform provider.
 
 > **IMPORTANT**
 >
