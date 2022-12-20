@@ -23,3 +23,74 @@ This repository contains [Jsonnet](https://jsonnet.org/) functions for generatin
 >
 > If you would like to contribute a change, you may open a Pull Request with a suggested change, but please note that it
 > will **not be merged in until the necessary updates have been made to the generator**.
+
+## Usage
+
+Install the package using [jsonnet-bundler](https://github.com/jsonnet-bundler/jsonnet-bundler):
+
+```
+jb install github.com/tf-libsonnet/dopplerhq-doppler@main
+
+# Or if you want to install a specific release
+#   jb install github.com/tf-libsonnet/dopplerhq-doppler@v0.0.1
+# Or if you want to install bindings for a specific provider major version series
+#   jb install github.com/tf-libsonnet/dopplerhq-doppler/1.x@main
+```
+
+You can then import the package in your Jsonnet code:
+
+```jsonnet
+// main.tf.json.jsonnet
+local tf = import 'github.com/tf-libsonnet/core/main.libsonnet';
+local doppler = import 'github.com/tf-libsonnet/dopplerhq-doppler/main.libsonnet';
+
+tf.withVariable('doppler_token', type='string')
++ doppler.provider.new(doppler_token='${var.doppler_token}', src='DopplerHQ/doppler')
++ doppler.secret.new('mysecret', project='backend', config='dev', name='MY_SECRET', value='some-secret-value')
+```
+
+This will generate the following Terraform JSON :
+
+```json
+{
+   "provider": {
+      "doppler": [
+         {
+            "doppler_token": "${var.doppler_token}"
+         }
+      ]
+   },
+   "resource": {
+      "doppler_secret": {
+         "mysecret": {
+            "config": "dev",
+            "name": "MY_SECRET",
+            "project": "backend",
+            "value": "some-secret-value"
+         }
+      }
+   },
+   "terraform": {
+      "required_providers": {
+         "doppler": {
+            "source": "DopplerHQ/doppler"
+         }
+      }
+   },
+   "variable": {
+      "doppler_token": {
+         "type": "string"
+      }
+   }
+}
+```
+
+Refer to the [reference docs](/docs/1.x/README.md) for a list of supported data sources and resources:
+
+- [provider config](/docs/1.x/provider.md)
+- [resources](/docs/1.x/README.md)
+- [data sources](/docs/1.x/data/index.md)
+
+## Contributing
+
+Refer to the [CONTRIBUTING.md](/CONTRIBUTING.md) document for information on how to contribute to `tf.libsonnet`.
