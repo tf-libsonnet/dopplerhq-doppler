@@ -4,8 +4,12 @@ local d = (import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet');
   provider: (import 'provider_doppler.libsonnet'),
   config: (import 'resources/config.libsonnet'),
   environment: (import 'resources/environment.libsonnet'),
+  integration_aws_parameter_store: (import 'resources/integration_aws_parameter_store.libsonnet'),
+  integration_aws_secrets_manager: (import 'resources/integration_aws_secrets_manager.libsonnet'),
   project: (import 'resources/project.libsonnet'),
   secret: (import 'resources/secret.libsonnet'),
+  secrets_sync_aws_parameter_store: (import 'resources/secrets_sync_aws_parameter_store.libsonnet'),
+  secrets_sync_aws_secrets_manager: (import 'resources/secrets_sync_aws_secrets_manager.libsonnet'),
   service_token: (import 'resources/service_token.libsonnet'),
   data: (import 'data/main.libsonnet'),
 }
