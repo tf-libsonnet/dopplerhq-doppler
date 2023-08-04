@@ -19,6 +19,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withName()`](#fn-withname)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withValue()`](#fn-withvalue)
+* [`fn withVisibility()`](#fn-withvisibility)
 
 ## Fields
 
@@ -53,6 +54,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `name` (`string`): The name of the Doppler secret
   - `project` (`string`): The name of the Doppler project
   - `value` (`string`): The raw secret value
+  - `visibility` (`string`): The visibility of the secret When `null`, the `visibility` field will be omitted from the resulting object.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -80,6 +82,7 @@ injecting into a complete block.
   - `name` (`string`): The name of the Doppler secret
   - `project` (`string`): The name of the Doppler project
   - `value` (`string`): The raw secret value
+  - `visibility` (`string`): The visibility of the secret When `null`, the `visibility` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `secret` resource into the root Terraform configuration.
@@ -147,3 +150,19 @@ Terraform resource block to set or update the value field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `value` field.
+
+
+### fn withVisibility
+
+```ts
+withVisibility()
+```
+
+`doppler.string.withVisibility` constructs a mixin object that can be merged into the `string`
+Terraform resource block to set or update the visibility field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`string`): The value to set for the `visibility` field.
