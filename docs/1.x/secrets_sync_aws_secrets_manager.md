@@ -20,6 +20,7 @@ This package contains functions and utilities for setting up the resource using 
 * [`fn withPath()`](#fn-withpath)
 * [`fn withProject()`](#fn-withproject)
 * [`fn withRegion()`](#fn-withregion)
+* [`fn withTags()`](#fn-withtags)
 
 ## Fields
 
@@ -55,6 +56,7 @@ or `$` to refer to the root object. Instead, make an explicit outer object using
   - `path` (`string`): The path to the secret in AWS
   - `project` (`string`): The name of the Doppler project
   - `region` (`string`): The AWS region
+  - `tags` (`obj`): AWS tags to attach to the secrets When `null`, the `tags` field will be omitted from the resulting object.
 
 **Returns**:
 - A mixin object that injects the new resource into the root Terraform configuration.
@@ -83,6 +85,7 @@ injecting into a complete block.
   - `path` (`string`): The path to the secret in AWS
   - `project` (`string`): The name of the Doppler project
   - `region` (`string`): The AWS region
+  - `tags` (`obj`): AWS tags to attach to the secrets When `null`, the `tags` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withResource](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withresource) to construct a new `secrets_sync_aws_secrets_manager` resource into the root Terraform configuration.
@@ -166,3 +169,19 @@ Terraform resource block to set or update the region field.
 **Args**:
   - `resourceLabel` (`string`): The name label of the block to update.
   - `value` (`string`): The value to set for the `region` field.
+
+
+### fn withTags
+
+```ts
+withTags()
+```
+
+`doppler.obj.withTags` constructs a mixin object that can be merged into the `obj`
+Terraform resource block to set or update the tags field.
+
+
+
+**Args**:
+  - `resourceLabel` (`string`): The name label of the block to update.
+  - `value` (`obj`): The value to set for the `tags` field.
