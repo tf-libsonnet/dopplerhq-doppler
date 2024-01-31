@@ -33,9 +33,9 @@ Optionally, this inserts the provider into the
 the `src` and/or `version` parameters are set.
 
 **Args**:
-  - `doppler_token` (`string`): A Doppler token, either a personal or service token
-  - `host` (`string`): The Doppler API host (i.e. https://api.doppler.com) When `null`, the `host` field will be omitted from the resulting object.
-  - `verify_tls` (`bool`): Whether or not to verify TLS When `null`, the `verify_tls` field will be omitted from the resulting object.
+  - `doppler_token` (`string`): A Doppler token, either a personal or service token. This can also be set via the DOPPLER_TOKEN environment variable.
+  - `host` (`string`): The Doppler API host (i.e. https://api.doppler.com). This can also be set via the DOPPLER_API_HOST environment variable. When `null`, the `host` field will be omitted from the resulting object.
+  - `verify_tls` (`bool`): Whether or not to verify TLS. This can also be set via the DOPPLER_VERIFY_TLS environment variable. When `null`, the `verify_tls` field will be omitted from the resulting object.
   - `alias` (`string`): The provider `alias` to set for this instance of the provider block. When `null`, the `alias`
   field will be omitted from the resulting provider block.
   - `src` (`string`): The provider `source` to set on the resulting `required_providers` block. If `src` or `version` is
@@ -67,9 +67,9 @@ This is most useful when you need to preprocess the attributes with functions, c
 injecting into a complete block.
 
 **Args**:
-  - `doppler_token` (`string`): A Doppler token, either a personal or service token
-  - `host` (`string`): The Doppler API host (i.e. https://api.doppler.com) When `null`, the `host` field will be omitted from the resulting object.
-  - `verify_tls` (`bool`): Whether or not to verify TLS When `null`, the `verify_tls` field will be omitted from the resulting object.
+  - `doppler_token` (`string`): A Doppler token, either a personal or service token. This can also be set via the DOPPLER_TOKEN environment variable.
+  - `host` (`string`): The Doppler API host (i.e. https://api.doppler.com). This can also be set via the DOPPLER_API_HOST environment variable. When `null`, the `host` field will be omitted from the resulting object.
+  - `verify_tls` (`bool`): Whether or not to verify TLS. This can also be set via the DOPPLER_VERIFY_TLS environment variable. When `null`, the `verify_tls` field will be omitted from the resulting object.
 
 **Returns**:
   - An attribute object that can be used with [tf.withProvider](https://github.com/tf-libsonnet/core/tree/main/docs#fn-withprovider) to construct a new `doppler` provider
